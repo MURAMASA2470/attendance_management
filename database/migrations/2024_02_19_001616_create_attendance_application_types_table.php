@@ -12,7 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('attendance_application_types', function (Blueprint $table) {
+            $table->comment('勤怠申請種別マスタ');
             $table->id();
+            $table->string('name')->comment('名称');
+            $table->text('remarks')->comment('備考');
             $table->timestamps();
         });
     }

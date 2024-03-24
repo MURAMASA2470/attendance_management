@@ -12,7 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('employees', function (Blueprint $table) {
+            $table->comment('社員マスタ');
             $table->id();
+            $table->string('code')->unique()->comment('社員コード');
+            $table->string('name')->comment('社員名');
+            $table->foreignId('user_id')->comment('ユーザーID')->constrained();
+            $table->boolean('is_valid')->comment('有効フラグ');
             $table->timestamps();
         });
     }

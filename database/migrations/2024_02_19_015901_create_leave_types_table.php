@@ -12,7 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('leave_types', function (Blueprint $table) {
+            $table->comment('休暇種類テーブル');
             $table->id();
+            $table->string('name')->comment('名称');
             $table->timestamps();
         });
     }
