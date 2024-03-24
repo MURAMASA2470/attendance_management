@@ -1,0 +1,82 @@
+社員マスタテーブル (employees)
+- ID
+- 氏名
+- ユーザーID
+- 有効フラグ
+
+勤怠テーブル (attendance_records)
+- ID
+- 社員ID
+- 日付
+- 勤怠種別ID
+- 出勤時間
+- 退勤時間
+- 休憩時間
+- 備考
+
+勤怠種別マスタ (attendance_types)
+- ID
+- 名称
+- 備考
+
+勤怠申請種別マスタ (attendance_application_types)
+- ID
+- 名称
+- 備考
+
+勤怠申請テーブル (attendance_application_records)
+- ID
+- 勤怠申請種別
+- 申請日
+- 申請理由
+- 承認日
+- 承認状態
+- 勤怠ID
+
+有給休暇テーブル (paid_leaves)
+- ID
+- 社員ID
+- 付与日
+- 勤怠申請ID
+
+
+**社員マスタテーブル (employees)**
+- id
+- name
+- user_id
+- valid_flag
+
+**勤怠テーブル (attendance_records)**
+- id
+- employee_id
+- date
+- attendance_type_id
+- start_time
+- end_time
+- break_time
+- remarks
+
+**勤怠種別マスタ (attendance_types)**
+- id
+- name
+- remarks
+
+**勤怠申請種別マスタ (attendance_application_types)**
+- id
+- name
+- remarks
+
+**勤怠申請テーブル (attendance_application_records)**
+- id
+- attendance_application_type
+- application_date
+- reason_for_application
+- approval_date
+- approval_status
+- attendance_id
+
+**有給休暇テーブル (paid_leaves)**
+- id
+- employee_id
+- grant_date
+- attendance_application_id
