@@ -23,7 +23,7 @@ sudo chmod 644 ./docker/mysql/my.cnf
 
 ```bash
 docker compose up -d --build
-docker compose exec php bash
+docker compose exec app bash
 composer install
 cp .env.example .env
 php artisan key:generate
