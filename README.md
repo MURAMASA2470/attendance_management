@@ -22,8 +22,12 @@ sudo chmod 644 ./docker/mysql/my.cnf
 ```
 
 ```bash
+# ホスト側で実行
 docker compose up -d --build
 docker compose exec app bash
+
+# コンテナ内で実行
+npm install
 composer install
 cp .env.example .env
 php artisan key:generate
