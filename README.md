@@ -38,12 +38,19 @@ php artisan migrate:fresh --seed
 ### 2回目以降
 
 ```bash
-#コンテナの停止
-docker compose stop
-#コンテナの起動
+# コンテナの起動
 docker compose start
+
+# コンテナの停止
+docker compose stop
+```
+
+### 環境が壊れたら
+
+```bash
 # 消滅の呪文
 docker compose down --rmi all --volumes --remove-orphans
+
 # 復活の呪文
 docker compose up -d --build
 ```
